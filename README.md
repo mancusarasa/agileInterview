@@ -1,9 +1,10 @@
 # How to create the environment and start the app
 
 ```
+mkdir venv
 virtualenv -p python3 venv/
-pip install -r requirements.txt
 . ./venv/bin/activate
+pip install -r requirements.txt
 ./api.py
 ```
 # Known issues
