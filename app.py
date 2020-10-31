@@ -8,7 +8,8 @@ from app_config import config
 
 # drop the database before starting
 db_file = config.get_db_file()
-os.remove(db_file)
+if os.path.exists(db_file):
+    os.remove(db_file)
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + db_file
 api = Api(app)
